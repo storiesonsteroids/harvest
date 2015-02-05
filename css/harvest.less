@@ -105,3 +105,70 @@ header {
 		}
 	}
 }
+
+/*
+	Top Nav
+*/
+
+nav.tab-bar {
+	background: #282e4d;
+}
+
+.move-left .exit-off-canvas {
+	background: rgba(0, 0, 0, .2);
+	
+	&:hover {
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
+.right-off-canvas-menu {
+	background: @background;
+	
+	ul.off-canvas-list li label {
+		background: darken(@background, 2%);
+		border-bottom: 2px solid rgba(255, 255, 255, .1);
+	}
+}
+
+/*
+	Structure
+*/
+
+#intro,
+#services {
+	margin-bottom: 8rem;
+}
+
+/*
+	Services
+*/
+
+#services {
+	h3 {
+		margin: 2rem 1rem;
+		min-height: 4.5rem;
+	}
+}
+
+/*
+	About parrallax
+*/
+
+#about {
+	display: block;
+	padding-top: 40rem;
+	background: transparent url(../img/photo.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+	
+	.content {
+		overflow: hidden;
+		background: rgba(36, 39, 52, .8);
+	}
+	
+	.row {
+		margin: 10rem auto 30rem;
+	}
+	
+}

@@ -104,3 +104,53 @@ header.green h1,
 header.green h2 {
   color: #08e495;
 }
+/*
+	Top Nav
+*/
+nav.tab-bar {
+  background: #282e4d;
+}
+.move-left .exit-off-canvas {
+  background: rgba(0, 0, 0, 0.2);
+}
+.move-left .exit-off-canvas:hover {
+  background: rgba(0, 0, 0, 0);
+}
+.right-off-canvas-menu {
+  background: #242734;
+}
+.right-off-canvas-menu ul.off-canvas-list li label {
+  background: #20222e;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+/*
+	Structure
+*/
+#intro,
+#services {
+  margin-bottom: 8rem;
+}
+/*
+	Services
+*/
+#services h3 {
+  margin: 2rem 1rem;
+  min-height: 4.5rem;
+}
+/*
+	About parrallax
+*/
+#about {
+  display: block;
+  padding-top: 40rem;
+  background: transparent url(../img/photo.jpg) no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#about .content {
+  overflow: hidden;
+  background: rgba(36, 39, 52, 0.8);
+}
+#about .row {
+  margin: 10rem auto 30rem;
+}
