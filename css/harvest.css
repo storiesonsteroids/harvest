@@ -48,9 +48,16 @@ h6 {
 }
 em {
   font-weight: 600;
+  font-style: normal;
 }
 strong {
   font-weight: 700;
+}
+a {
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
 }
 html,
 body {
@@ -80,7 +87,7 @@ header h1,
 header h2 {
   display: inline-block;
   padding: 1rem 1.5rem;
-  margin: 2rem 0 4rem;
+  margin: 2rem 0 2rem;
   border-top: 1px solid;
   border-bottom: 1px solid;
 }
@@ -111,6 +118,9 @@ nav.tab-bar {
 .right-off-canvas-menu ul.off-canvas-list li label {
   background: #20222e;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.right-off-canvas-menu a {
+  text-decoration: none;
 }
 /*
 	#topNav {
@@ -157,27 +167,76 @@ iframe {
   width: 100%;
   min-height: 480px;
 }
+#intro header {
+  margin-bottom: 2rem;
+}
+#services h3 {
+  margin: 2rem 0;
+}
+#services .icon {
+  margin-top: 1rem;
+}
+#services ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+#services ul li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+#services ul li:before {
+  content: "•";
+  font-family: Arial;
+  color: #db0fab;
+  font-size: 24px;
+  line-height: 1;
+  padding-right: 10px;
+  position: relative;
+  top: 3px;
+}
+#services ul li ul {
+  margin: 0;
+}
+#services ul li ul li:before {
+  color: #08e495;
+}
+#about strong,
+#about a {
+  color: #db0fab;
+  font-weight: 700;
+}
+#about .content {
+  background: rgba(36, 39, 52, 0.8);
+  margin-top: -4rem;
+  position: relative;
+}
+#contact {
+  padding-bottom: 2rem;
+}
+#contact a {
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+}
+#contact h4 {
+  text-transform: none;
+  font-size: 1.8rem;
+  margin: 1rem 0 1.4rem;
+}
+#contact .phone a {
+  color: #08e495;
+}
+#contact .email a {
+  color: #09aee1;
+  border-bottom: 2px solid;
+}
+#contact .email a:hover {
+  border-bottom-color: transparent;
+}
 @media screen and (min-width: 40.063em) {
   #services h3 {
     margin: 2rem 1rem;
   }
-  /*
-	#about {
-		display: block;
-		padding-top: 40rem;
-		background: transparent url(../img/photo.jpg) no-repeat top center;
-		background-size: cover;
-		background-attachment: fixed;
-		
-		.content {
-			overflow: hidden;
-			background: rgba(36, 39, 52, .8);
-		}
-		
-		.row {
-			margin: 10rem auto 30rem;
-		}
-		
-	}
-	*/
 }

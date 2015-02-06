@@ -1,11 +1,11 @@
 .harvest-baseline (@param:"") {
 
 	html, body {
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: @body;
 	}
 	
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Raleway', sans-serif;
+		font-family: @display;
 		text-transform: uppercase;
 		
 		color: @color;
@@ -31,10 +31,19 @@
 	
 	em {
 		font-weight: 600;
+		font-style: normal;
 	}
 	
 	strong {
 		font-weight: 700;
+	}
+	
+	a {
+		text-decoration: underline;
+		
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	
 	// colors
@@ -74,7 +83,7 @@
 		h1, h2 {
 			display: inline-block;
 			padding: 1rem 1.5rem;
-			margin: 2rem 0 4rem;
+			margin: 2rem 0 2rem;
 			border-top: 1px solid;
 			border-bottom: 1px solid;
 		}
@@ -116,6 +125,10 @@
 		ul.off-canvas-list li label {
 			background: darken(@background, 2%);
 			border-bottom: 2px solid rgba(255, 255, 255, .1);
+		}
+		
+		a {
+			text-decoration: none;
 		}
 	}
 	
