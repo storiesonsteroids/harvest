@@ -1,0 +1,122 @@
+.harvest-baseline (@param:"") {
+
+	html, body {
+		font-family: "Source Sans Pro", sans-serif;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+		
+		color: @color;
+		
+		&.red {
+			color: @red;
+		}
+		&.green {
+			color: @green;
+		}
+		&.blue {
+			color: @blue;
+		}
+	}
+	
+	h1, h2 {
+		font-weight: 300;
+	}
+	
+	h3, h4, h5, h6 {
+		font-weight: 500;
+	}
+	
+	em {
+		font-weight: 600;
+	}
+	
+	strong {
+		font-weight: 700;
+	}
+	
+	// colors
+	
+	html, body {
+		background: @background;
+		color: @color;
+	}
+	
+	// Image replacement
+	
+	.ir {
+		display: block;
+		overflow: hidden;
+		text-indent: -5000em;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: transparent;
+	}
+	
+	// Intro
+	
+	h1.brand.ir {
+		background-image: url(../img/logo@2x.png);
+		background-size: contain;
+		height: 400px;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		border: none;
+	}
+	
+	// Headers
+	
+	header {
+		text-align: center;
+	
+		h1, h2 {
+			display: inline-block;
+			padding: 1rem 1.5rem;
+			margin: 2rem 0 4rem;
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+		}
+	
+		&.red {
+			h1, h2 {
+				color: @red;
+			}
+		}
+		&.blue {
+			h1, h2 {
+				color: @blue;
+			}
+		}
+		&.green {
+			h1, h2 {
+				color: @green;
+			}
+		}
+	}
+	
+	// Top Nav
+	
+	nav.tab-bar {
+		background: #282e4d;
+	}
+	
+	.move-left .exit-off-canvas {
+		background: rgba(0, 0, 0, .2);
+		
+		&:hover {
+			background: rgba(0, 0, 0, 0);
+		}
+	}
+	
+	.right-off-canvas-menu {
+		background: @background;
+		
+		ul.off-canvas-list li label {
+			background: darken(@background, 2%);
+			border-bottom: 2px solid rgba(255, 255, 255, .1);
+		}
+	}
+	
+}
