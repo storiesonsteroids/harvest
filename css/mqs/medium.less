@@ -1,15 +1,75 @@
 .harvest-medium (@param:"") {
 	
+	#top {
+		background: transparent url(../img/brand-bg.jpg) no-repeat center top;
+		background-size: contain;
+	
+		.brand {
+			margin: 8rem 0;
+		}
+	}
+	
+	// increase spacing between blocks
+	#intro, 
+	#about {
+		padding: 5rem 0 5rem;
+		
+		header {
+			margin-bottom: 4rem;
+		}
+	}
+	
+	// intro
+	
+	#intro {
+		background: transparent url(../img/green-glow.jpg) no-repeat center top;
+		
+		
+		// green glow background
+		header {
+			text-shadow: 0 0 10px @green;
+		}
+		
+	}
+	
 	// Services
 	
-	#services {
+	#services {		
+		
+		header {
+			background: transparent url(../img/services-bg.jpg) no-repeat center center;
+			background-size: contain;
+			padding: 5rem 0 5rem;
+		}
+		
 		h3 {
 			margin: 2rem 1rem;
 		}
 	}
 	
-	// About parrallax
+	// about
+	#about {
+		
+		.content {
+			margin-top: -8rem;
+			
+			header {
+				margin: 3rem 0;
+			}
+		}
+		
+	}
 	
 	
+	// Contact
+	
+	#contact {
+		background: transparent url(../img/x@2x.png) no-repeat center 10rem;
+		background-size: 149px 149px;
+		
+		.map {
+			margin-top: 2rem;
+		}
+	}	
 	
 }
