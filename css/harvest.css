@@ -113,29 +113,35 @@ nav.tab-bar {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 /*
-	Structure
-*/
-/*
-	Services
-*/
-#services h3 {
-  margin: 2rem 1rem;
-  min-height: 4.5rem;
+	#topNav {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 999;
+	}
+	*/
+iframe {
+  width: 100%;
+  min-height: 320px;
 }
-/*
-	About parrallax
-*/
-#about {
-  display: block;
-  padding-top: 40rem;
-  background: transparent url(../img/photo.jpg) no-repeat top center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-#about .content {
-  overflow: hidden;
-  background: rgba(36, 39, 52, 0.8);
-}
-#about .row {
-  margin: 10rem auto 30rem;
+@media screen and (min-width: 40.063em) {
+  #services h3 {
+    margin: 2rem 1rem;
+    min-height: 4.5rem;
+  }
+  #about {
+    display: block;
+    padding-top: 40rem;
+    background: transparent url(../img/photo.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #about .content {
+    overflow: hidden;
+    background: rgba(36, 39, 52, 0.8);
+  }
+  #about .row {
+    margin: 10rem auto 30rem;
+  }
 }
