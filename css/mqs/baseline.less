@@ -130,9 +130,50 @@
 	}
 	*/
 	
+	// icons
+	
+	.icon {
+		display: block;
+		min-height: 46px;
+		background-size: contain;
+		text-indent: -5000em;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: transparent;
+		
+		&.brain {
+			background-image: url(../img/icon-brain@2x.png);
+		}
+		
+		&.eyes-ears {
+			background-image: url(../img/icon-eyesears@2x.png);
+		}
+		
+		&.lips {
+			background-image: url(../img/icon-lips@2x.png);
+		}
+		
+		&.phone,
+		&.mail {
+			vertical-align: middle;
+			width: 68px;
+			display: inline-block;
+			margin: 0 1rem;
+		}
+		
+		&.phone {
+			background-image: url(../img/icon-phone@2x.png);
+		}
+		
+		&.mail {
+			background-image: url(../img/icon-mail@2x.png);
+		}
+	}
+	
 	// gmaps
 	iframe {
 		width: 100%;
-		min-height: 320px;
+		min-height: 480px;
 	}
 }

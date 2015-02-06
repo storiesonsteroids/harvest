@@ -121,27 +121,63 @@ nav.tab-bar {
 		z-index: 999;
 	}
 	*/
+.icon {
+  display: block;
+  min-height: 46px;
+  background-size: contain;
+  text-indent: -5000em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+.icon.brain {
+  background-image: url(../img/icon-brain@2x.png);
+}
+.icon.eyes-ears {
+  background-image: url(../img/icon-eyesears@2x.png);
+}
+.icon.lips {
+  background-image: url(../img/icon-lips@2x.png);
+}
+.icon.phone,
+.icon.mail {
+  vertical-align: middle;
+  width: 68px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.icon.phone {
+  background-image: url(../img/icon-phone@2x.png);
+}
+.icon.mail {
+  background-image: url(../img/icon-mail@2x.png);
+}
 iframe {
   width: 100%;
-  min-height: 320px;
+  min-height: 480px;
 }
 @media screen and (min-width: 40.063em) {
   #services h3 {
     margin: 2rem 1rem;
-    min-height: 4.5rem;
   }
-  #about {
-    display: block;
-    padding-top: 40rem;
-    background: transparent url(../img/photo.jpg) no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  #about .content {
-    overflow: hidden;
-    background: rgba(36, 39, 52, 0.8);
-  }
-  #about .row {
-    margin: 10rem auto 30rem;
-  }
+  /*
+	#about {
+		display: block;
+		padding-top: 40rem;
+		background: transparent url(../img/photo.jpg) no-repeat top center;
+		background-size: cover;
+		background-attachment: fixed;
+		
+		.content {
+			overflow: hidden;
+			background: rgba(36, 39, 52, .8);
+		}
+		
+		.row {
+			margin: 10rem auto 30rem;
+		}
+		
+	}
+	*/
 }
