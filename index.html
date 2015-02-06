@@ -24,7 +24,7 @@
 	  			</section>
 	  		</nav>
 	  		
-	  		<aside class="right-off-canvas-menu">
+	  		<aside id="sideNav" class="right-off-canvas-menu">
 		  		<ul class="off-canvas-list">
 			  		<li><label>Navigation</label></li>
 			  		<li><a href="#intro">Intro</a></li>
@@ -206,11 +206,29 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
 	<script>
+		// Foundation
+		
 		$(document).foundation({
 			offcanvas: {
 			close_on_click: true
 			}
 		});
+		
+		// Scroll to anchor — thanks, guy on SO http://stackoverflow.com/questions/8579643/simple-jquery-scroll-to-anchor-up-or-down-the-page
+		function scrollToAnchor(aid){
+		    var aTag = $(aid);
+		    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+		}
+		
+		$('#sideNav a').click(function(evt) {
+			evt.preventDefault();
+			
+			var href = $(this).attr("href");
+			
+			scrollToAnchor(href);
+		});
+		
+		// Google Maps
 		
 		var map;
 		var offices = new google.maps.LatLng(51.1933053,4.4126723); 
