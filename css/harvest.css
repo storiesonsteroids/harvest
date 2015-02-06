@@ -163,9 +163,10 @@ nav.tab-bar {
 .icon.mail {
   background-image: url(../img/icon-mail@2x.png);
 }
-iframe {
+#gmap {
   width: 100%;
   min-height: 480px;
+  background: #000;
 }
 #intro header {
   margin-bottom: 2rem;

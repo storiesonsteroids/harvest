@@ -193,7 +193,7 @@
 			  	<!-- map -->
 			  	
 			  	<div id="gmap">
-				  	<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Uitbreidingstraat%202-8%2C%20Antwerp%2C%20Belgium&key=AIzaSyDFGZIB_gMyj4uF7-A1njo-9o3m85-Q43c"></iframe>
+				  	<!--<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Uitbreidingstraat%202-8%2C%20Antwerp%2C%20Belgium&key=AIzaSyDFGZIB_gMyj4uF7-A1njo-9o3m85-Q43c"></iframe> -->
 			  	</div>
 			  	
 		    </section>
@@ -201,15 +201,67 @@
 		     <a class="exit-off-canvas"></a>
 		</div>
 	</div>
-     
+    
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation({
-	      offcanvas: {
-		      close_on_click: true
-	      }
-      });
-    </script>
+	<script>
+		$(document).foundation({
+			offcanvas: {
+			close_on_click: true
+			}
+		});
+		
+		var map;
+		var offices = new google.maps.LatLng(51.1933053,4.4126723); 
+		
+		var MY_MAPTYPE_ID = 'custom_style';
+		
+		function initialize() {
+			var featureOpts = [
+				{
+					"stylers": [
+						{ "invert_lightness": true },
+						{ "hue": "#6b6780" },
+						{ "saturation": -80 },
+						{ "gamma": 1.2 }
+					]
+				}
+			];
+			
+			var mapOptions = {
+				zoom: 17,
+				center: offices,
+				disableDefaultUI: true,
+				mapTypeId: MY_MAPTYPE_ID
+			};
+			
+			map = new google.maps.Map(document.getElementById('gmap'), mapOptions);
+			
+			var marker = new google.maps.Marker({
+				position: offices,
+				map: map,
+				title: "Harvest",
+				visible: true,
+				
+			});
+			
+			var styledMapOptions = {
+				name: 'Custom Style'
+			};
+			
+			var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+			
+			map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				window.location = "https://www.google.be/maps/place/Uitbreidingstraat+2,+2600+Antwerpen/@51.1933053,4.4126723,17z/data=!4m7!1m4!3m3!1s0x47c3f727823e5273:0xa2fd2e8f3a9fbdb!2sUitbreidingstraat+2,+2600+Antwerpen!3b1!3m1!1s0x47c3f727823e5273:0xa2fd2e8f3a9fbdb";
+			});
+		}
+		
+		google.maps.event.addDomListener(window, 'load', initialize);
+		
+		
+	</script>
   </body>
 </html>
