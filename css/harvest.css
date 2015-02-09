@@ -149,6 +149,9 @@ header.green h2 {
 .sidebarRight .shutRight:hover {
   color: #f12cc2;
 }
+.sidebarRight .scrollableArea {
+  z-index: 999;
+}
 .sidebarRight ul {
   margin: 0;
   padding: 0 0;
@@ -209,6 +212,7 @@ header.green h2 {
   right: 0;
   bottom: 0;
   height: auto;
+  z-index: 150;
   background: rgba(0, 0, 0, 0.5);
 }
 .icon {
