@@ -1,8 +1,31 @@
 .harvest-large(@param:""){
+	
 	#top {
-		.brand {
-			margin: 8rem 0 4rem;
-			height: 400px;
+		background: transparent;
+		position: absolute;
+		width: 50%;
+		
+		.columns {
+			padding: 0 0!important;
+			margin: 0!important;
+			width: 100%!important;
 		}
+		
+		.brand {
+			margin: 5rem 4rem;
+			height: 512px;
+		}
+	}
+	
+	#about {
+		.content {
+			margin-top: -16rem;
+			
+		}
+	}
+	
+	#intro {
+		background: @background url(../img/background-large.jpg) no-repeat center top;
+		background-size: contain;
 	}
 }
