@@ -60,7 +60,8 @@ a:hover {
   text-decoration: none;
 }
 html,
-body {
+body,
+#page {
   background: #242734;
   color: #ffffff;
 }
