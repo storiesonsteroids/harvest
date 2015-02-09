@@ -53,8 +53,6 @@
 					  	<p>We then infuse your story with the steroids it needs to make it travel. A mix of <strong>PR</strong> pepper, <strong>Social</strong> salt, Owned and Earned <strong>Media</strong> ingredients to make it fly.</p>
 					  	
 					  	<p><strong>Harvest tells your story and manages your reputation and conversations. 24/7, on- and offline.</strong></p>
-					  	
-					  	<a href="#" id="closeSidenav" class="slideLeft">close</a>
 				  	</div>
 			  	</div>
 		  	
@@ -187,10 +185,10 @@
 			  	<!-- fallback content? -->
 			  	
 		  	</div>
-  	
+		  	
 	  	</div>
 	  	
-	  	
+	  	<a href="#" id="closeSidenav" class="slideLeft">close</a>
 	  	
 	</section>
 
@@ -235,6 +233,9 @@
 		    var target = aTag.offset().top;
 		    
 			$('#scrollableArea').animate({scrollTop: offset + target},'slow');
+			
+			// force close by faking a click
+			$('#closeSidenav').click();
 		}
 		
 		$('#sideNav a').click(function(evt) {
