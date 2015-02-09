@@ -104,25 +104,123 @@ header.green h1,
 header.green h2 {
   color: #08e495;
 }
-nav.tab-bar {
+#topNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  z-index: 999;
   background: #282e4d;
 }
-.move-left .exit-off-canvas {
-  background: rgba(0, 0, 0, 0.2);
-}
-.move-left .exit-off-canvas:hover {
-  background: rgba(0, 0, 0, 0);
-}
-.right-off-canvas-menu {
-  background: #242734;
-}
-.right-off-canvas-menu ul.off-canvas-list li label {
-  background: #20222e;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-.right-off-canvas-menu a {
+#rightBurger {
+  display: block;
+  height: 44px;
+  width: 44px;
+  color: #fff;
   text-decoration: none;
+  line-height: 44px;
+  text-align: center;
+  font-size: 24px;
+  background: #1d2139;
 }
+#rightBurger:hover {
+  background: #3f487d;
+}
+#rightBurger:active {
+  background: #000000;
+}
+.sidebarRight {
+  background: #1a1c25 url(../img/logo.png) no-repeat center 90%;
+  background-size: 150px;
+}
+.sidebarRight .shutRight {
+  text-decoration: none;
+  font-size: 32px;
+  color: #db0fab;
+  line-height: 44px;
+  display: block;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  top: 5px;
+  right: 5px!important;
+}
+.sidebarRight .shutRight:hover {
+  color: #f12cc2;
+}
+.sidebarRight ul {
+  margin: 0;
+  padding: 0 0;
+  list-style: none;
+}
+.sidebarRight ul li {
+  padding: 1rem 1rem 0;
+}
+.sidebarRight ul label {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.sidebarRight ul a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.sidebarRight ul a.green {
+  color: #08e495;
+}
+.sidebarRight ul a.green:hover {
+  color: #59f9c0;
+}
+.sidebarRight ul a.blue {
+  color: #09aee1;
+}
+.sidebarRight ul a.blue:hover {
+  color: #58d2f8;
+}
+.sidebarRight ul a.red {
+  color: #db0fab;
+}
+.sidebarRight ul a.red:hover {
+  color: #f45cd0;
+}
+/*
+	
+	nav.tab-bar {
+		background: #282e4d;
+	}
+	
+	.move-left .exit-off-canvas {
+		background: rgba(0, 0, 0, .2);
+		
+		&:hover {
+			background: rgba(0, 0, 0, 0);
+		}
+	}
+	
+	.right-off-canvas-menu {
+		background: @background;
+		
+		ul.off-canvas-list li label {
+			background: darken(@background, 2%);
+			border-bottom: 2px solid rgba(255, 255, 255, .1);
+		}
+		
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	*/
 /*
 	#topNav {
 		position: fixed;

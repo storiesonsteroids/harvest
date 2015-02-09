@@ -209,7 +209,7 @@ body {
   z-index: 500; }
   .page .scrollableArea {
     position: absolute;
-    top: 0; /* 4rem; */
+    top: 44px; /* 4rem; */
     bottom: 0;
     }
     /*
