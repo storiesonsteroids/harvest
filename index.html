@@ -22,7 +22,7 @@
 			<a href="" id="rightBurger" class="slideLeft">&#9776;</a>
 		</header>
 		
-		<div class="scrollableArea">
+		<div id="scrollableArea" class="scrollableArea">
 		
 	  		<!-- logo -->
 		
@@ -139,7 +139,7 @@
 			  	
 			  	<div class="content">
 			  	
-			  		<div class="row">
+			  		<div class="row" id="about_content">
 					  	<header class="red">
 					  		<h2>Who We Are</h2>
 					  	</header>
@@ -229,7 +229,12 @@
 		// Scroll to anchor — thanks, guy on SO http://stackoverflow.com/questions/8579643/simple-jquery-scroll-to-anchor-up-or-down-the-page
 		function scrollToAnchor(aid){
 		    var aTag = $(aid);
-		    $('#page .scrollableArea').animate({scrollTop: aTag.offset().top},'slow');
+		    
+		    // offset 
+		    var offset = aTag.offsetParent().scrollTop();
+		    var target = aTag.offset().top;
+		    
+			$('#scrollableArea').animate({scrollTop: offset + target},'slow');
 		}
 		
 		$('#sideNav a').click(function(evt) {
