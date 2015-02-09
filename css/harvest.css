@@ -76,9 +76,9 @@ body,
 h1.brand.ir {
   background-image: url(../img/logo@2x.png);
   background-size: contain;
-  height: 400px;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  height: 250px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   border: none;
 }
 header {
@@ -87,7 +87,7 @@ header {
 header h1,
 header h2 {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0.5rem;
   margin: 2rem 0 2rem;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -193,43 +193,6 @@ header.green h2 {
 .sidebarRight ul a.red:hover {
   color: #f45cd0;
 }
-/*
-	
-	nav.tab-bar {
-		background: #282e4d;
-	}
-	
-	.move-left .exit-off-canvas {
-		background: rgba(0, 0, 0, .2);
-		
-		&:hover {
-			background: rgba(0, 0, 0, 0);
-		}
-	}
-	
-	.right-off-canvas-menu {
-		background: @background;
-		
-		ul.off-canvas-list li label {
-			background: darken(@background, 2%);
-			border-bottom: 2px solid rgba(255, 255, 255, .1);
-		}
-		
-		a {
-			text-decoration: none;
-		}
-	}
-	
-	*/
-/*
-	#topNav {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-		z-index: 999;
-	}
-	*/
 .icon {
   display: block;
   min-height: 46px;
@@ -341,7 +304,8 @@ header.green h2 {
     background-size: contain;
   }
   #top .brand {
-    margin: 8rem 0;
+    margin: 4rem 0 0;
+    height: 320px;
   }
   #intro,
   #about {
@@ -377,5 +341,11 @@ header.green h2 {
   }
   #contact .map {
     margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 64.063em) {
+  #top .brand {
+    margin: 8rem 0 4rem;
+    height: 400px;
   }
 }
