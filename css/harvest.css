@@ -110,7 +110,7 @@ header.green h2 {
   left: 0;
   right: 0;
   height: 44px;
-  z-index: 100;
+  z-index: 200;
   background: #282e4d;
 }
 #rightBurger {
