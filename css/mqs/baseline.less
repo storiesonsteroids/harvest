@@ -162,9 +162,7 @@
 			}
 		}
 		
-		.scrollableArea {
-			z-index: 999;
-		}
+		.scrollableArea {}
 		
 		ul {
 			margin: 0;
@@ -244,6 +242,16 @@
 			height: auto;
 			z-index: 150;
 			background: rgba(0, 0, 0, .5);
+		}
+	}
+	
+	/* IE workaround cuz "we don't need conditional comments anymore lol WRONG" */
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+		#closeSidenav {
+			display: none!important;
+			width: 0;
+			height: 0;
 		}
 	}
 	
