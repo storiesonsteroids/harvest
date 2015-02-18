@@ -50,6 +50,21 @@ em {
   font-weight: 600;
   font-style: normal;
 }
+p em {
+  font-style: italic;
+}
+p.red em,
+p.red strong {
+  color: #db0fab;
+}
+p.green em,
+p.green strong {
+  color: #08e495;
+}
+p.blue em,
+p.blue strong {
+  color: #09aee1;
+}
 strong {
   font-weight: 700;
 }

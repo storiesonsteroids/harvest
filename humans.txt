@@ -1,8 +1,50 @@
-/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
-/* zurb.com */
-/* humanstxt.org */
+# Harvest Website
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
-  Software: Sublime, Git, Sass
+## Credits
+
+Made for Harvest, in cooperation with Duval Guillaume (http://www.duvalguillaume.com/) and Saatchi & Saatchi Belgium (http://www.saatchi.be/).
+
+Design & code by Gilles Vandenoostende 
+http://www.vandenoostende.com
+
+## Colophon
+
+### Fonts: 
+
+Raleway
+
+Source Sans Pro
+
+by Google Fonts
+https://www.google.com/fonts/
+
+Harvest logo is set in Futura 
+http://en.wikipedia.org/wiki/Futura_%28typeface%29
+
+### Code:
+
+Foundation 
+http://foundation.zurb.com/
+
+Modernizr 
+http://modernizr.com/
+
+LESS CSS 
+http://lesscss.org/
+
+### Tools & Software:
+
+Adobe Creative Cloud — Photoshop and Illustrator 
+http://www.adobe.com/
+
+Coda 2 
+https://panic.com/coda/
+
+Codekit 
+https://incident57.com/codekit/
+
+Git 
+http://git-scm.com/
+
+Repository hosted on Github 
+https://github.com/
