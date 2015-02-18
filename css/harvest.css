@@ -238,7 +238,7 @@ header.green h2 {
 }
 .icon {
   display: block;
-  min-height: 46px;
+  min-height: 69px;
   background-size: contain;
   text-indent: -5000em;
   overflow: hidden;
@@ -313,9 +313,11 @@ header.green h2 {
   font-weight: 700;
 }
 #about .content {
+  background: #242734;
   background: rgba(36, 39, 52, 0.8);
   margin-top: -4rem;
   position: relative;
+  padding-bottom: 4rem;
 }
 #contact {
   padding-bottom: 2rem;
