@@ -74,6 +74,9 @@ a {
 a:hover {
   text-decoration: none;
 }
+span.amp {
+  font-size: 2em;
+}
 html,
 body,
 #page {
