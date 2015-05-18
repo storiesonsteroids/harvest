@@ -310,6 +310,42 @@ header.green h2 {
 #services ul li ul li:before {
   color: #08e495;
 }
+#cases .case .embedContainer iframe {
+  display: block;
+  min-height: 15rem;
+}
+#cases .case .media {
+  margin-bottom: 2rem;
+}
+#cases .case .text hgroup {
+  text-align: center;
+  padding: 0 0 1.5rem;
+}
+#cases .case .text hgroup h3 {
+  margin: 0;
+  color: #08e495;
+}
+#cases .case .text hgroup h4 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  color: #058155;
+}
+#cases nav {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+#cases nav a.btn {
+  display: inline-block;
+  padding: 5px 23px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #08e495;
+}
+#cases nav a.btn.prev {
+  color: #058155;
+}
 #about strong,
 #about a {
   color: #db0fab;
@@ -384,6 +420,15 @@ header.green h2 {
   }
   #services h3 {
     margin: 2rem 1rem;
+  }
+  #cases {
+    padding: 5rem 0 2rem;
+  }
+  #cases .case {
+    padding: 2rem 0 0;
+  }
+  #cases .case .embedContainer iframe {
+    min-height: 19rem;
   }
   #about {
     margin-top: 5rem;
