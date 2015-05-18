@@ -48,12 +48,21 @@
 	}
 	
 	#cases {
+		.cases {
+			position: relative;
+			overflow: hidden;
+			-webkit-text-size-adjust: none;
+		}
+	
 		.case {
-			
-			display: none;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
 			
 			&.selected {
-				display: block;
+				visibility: visible;
+				position: relative;
 			}
 			
 			.embedContainer {

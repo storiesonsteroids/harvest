@@ -186,8 +186,8 @@
 			  	</div>
 		  		
 		  		<nav class="row">
-			  		<a href="#" class="btn prev">&laquo; Vorige</a>
-			  		<a href="#" class="btn next">Volgende &raquo;</a>
+			  		<a href="#" class="btn prev">&laquo; Previous</a>
+			  		<a href="#" class="btn next">Next Case &raquo;</a>
 		  		</nav>
 		  		
 		  	</div>
@@ -299,30 +299,61 @@
 			// set selected index
 			function setSelectedCase(index) {
 				// unselect previous
-				unselectCase();
+				unselectCase(index);
 				
 				var $case = cases[index];
-				
-				$case.toggleClass("selected", true);
 				
 				var embedCode = $('.embedCode', $case).text().toString();
 				var embedContainer = $('.embedContainer', $case);
 				
-				embedContainer.html(embedCode);
+				// LTR or RTL?
+				if(index > selectedIndex) {
+					// RTL
+					targetX = $(window).width();
+				} else {
+					// LTR
+					targetX = -1*$(window).width();
+				}
 				
-				
+				$case.css({ 
+					left: targetX + "px",
+					visibility: "visible"
+				});
+								
+				$case.animate({ left: 0 + "px" }, 200, function() {
+					$case.toggleClass("selected", true);
+					$case.attr("style", null);
+					
+					embedContainer.html(embedCode);
+				});
+								
 				selectedIndex = index;
 			}
 			
-			function unselectCase() {
+			function unselectCase(newIndex) {
 				var $selectedCase = $('#cases .case.selected');
 				
 				// clear embeds
 				var embedContainer = $('.embedContainer', $selectedCase);
 				
-				embedContainer.empty();
+				var targetX = 0;
 				
-				$selectedCase.toggleClass("selected", false);
+				// LTR or RTL?
+				if(newIndex > selectedIndex) {
+					// RTL
+					targetX = -1*$(window).width();
+				} else {
+					// LTR
+					targetX = $(window).width();
+				}
+				
+				$selectedCase.animate({ left: targetX + 'px' }, 200, function() {
+					$(this).toggleClass("selected", false);
+					
+					$(this).attr("style", null);
+					
+					embedContainer.empty();
+				});
 			}
 			
 			setSelectedCase(selectedIndex);
@@ -347,13 +378,14 @@
 				}
 				
 				setSelectedCase(index);
+				scrollToAnchor('#cases', false);
 			});
 			
 		});
 		
 		
 		// Scroll to anchor — thanks, guy on SO http://stackoverflow.com/questions/8579643/simple-jquery-scroll-to-anchor-up-or-down-the-page
-		function scrollToAnchor(aid){
+		function scrollToAnchor(aid, forceClose){
 		    var aTag = $(aid);
 		    
 		    // offset 
@@ -362,8 +394,10 @@
 		    
 			$('#scrollableArea').animate({scrollTop: offset + target - 44},'slow');
 			
-			// force close by faking a click
-			$('#closeSidenav').click();
+			if(forceClose) {
+				// force close by faking a click
+				$('#closeSidenav').click();
+			}
 		}
 		
 		$('#sideNav a').click(function(evt) {
@@ -371,7 +405,7 @@
 			
 			var href = $(this).attr("href");
 			
-			scrollToAnchor(href);
+			scrollToAnchor(href, true);
 		});
 		
 		// Google Maps
