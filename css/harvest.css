@@ -310,6 +310,12 @@ header.green h2 {
 #services ul li ul li:before {
   color: #08e495;
 }
+#cases .case {
+  display: none;
+}
+#cases .case.selected {
+  display: block;
+}
 #cases .case .embedContainer iframe {
   display: block;
   min-height: 15rem;
